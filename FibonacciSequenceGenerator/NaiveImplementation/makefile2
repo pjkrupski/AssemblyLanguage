@@ -1,0 +1,5 @@
+fibonacciARM: fibonacci.o
+	gcc -o fibonacciARM fibonacci.o
+
+fibonacci.o: fibonacci.s
+	gcc -c -g fibonacci.s

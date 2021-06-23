@@ -1,0 +1,17 @@
+decoder: decode.o read_image.o decoder.o read_int.o
+	gcc -o decoder decode.o read_image.o decoder.o read_int.o
+
+decode.o: decode.c
+	gcc -c -g decode.c
+
+read_image.o: read_image.s
+	gcc -c -g read_image.s
+
+decoder.o: decoder.c
+	gcc -c -g decoder.c
+
+read_int.o: read_int.c
+	gcc -c -g read_int.c
+
+clean:
+	rm *.o decoder
